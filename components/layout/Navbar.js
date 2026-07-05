@@ -7,7 +7,7 @@ import { useLang, t, ui } from '@/contexts/LangContext'
 import { cn, CATEGORIES } from '@/lib/utils'
 
 export default function Navbar() {
-  const pathname = usePathname()
+  const pathname = usePathname() ?? ''
   const { lang, setLang } = useLang()
   const [open,    setOpen]    = useState(false)
   const [scrolled, setScrolled] = useState(false)
