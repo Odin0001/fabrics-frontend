@@ -15,7 +15,7 @@ const NAV = [
 ]
 
 function SidebarLink({ href, label, icon: Icon, exact }) {
-  const pathname = usePathname()
+  const pathname = usePathname() ?? ''
   const active = exact ? pathname === href : pathname.startsWith(href)
   return (
     <Link
@@ -35,7 +35,7 @@ function SidebarLink({ href, label, icon: Icon, exact }) {
 export default function AdminShell({ children }) {
   const { user, loading, logout } = useAuth()
   const router = useRouter()
-  const pathname = usePathname()
+  const pathname = usePathname() ?? ''
   const isLoginRoute = pathname === '/admin/login'
   const [mounted, setMounted] = useState(false)
 
