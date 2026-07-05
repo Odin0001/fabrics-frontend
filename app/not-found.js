@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Navbar from '@/components/layout/Navbar'
 
 export const metadata = {
   title: '404 — Page Not Found',
@@ -9,7 +8,14 @@ export const metadata = {
 export default function NotFound() {
   return (
     <>
-      <Navbar />
+      <header className="fixed top-0 inset-x-0 z-50 h-18 flex items-center px-6">
+        <Link
+          href="/"
+          className="font-display text-2xl font-light tracking-wide text-gold hover:text-ink transition-colors"
+        >
+          ARTIA DESIGN
+        </Link>
+      </header>
       <main className="min-h-screen flex items-center justify-center px-6">
         <div className="text-center animate-fade-up">
           <p className="font-display text-[12rem] font-light leading-none text-border select-none">
