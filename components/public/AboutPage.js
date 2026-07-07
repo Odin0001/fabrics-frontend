@@ -2,11 +2,11 @@
 import { useLang, t, ui } from '@/contexts/LangContext'
 
 const timeline = [
-  { year: '2008', en: 'Founded in Dubai with a focus on premium upholstery fabrics.', ar: 'تأسست في دبي مع التركيز على أقمشة التنجيد الراقية.' },
-  { year: '2012', en: 'Expanded our sourcing network to include European and Asian mills.', ar: 'وسّعنا شبكة مصادرنا لتشمل مطاحن أوروبية وآسيوية.' },
-  { year: '2016', en: 'Launched the contract-grade collection for commercial interiors.', ar: 'أطلقنا مجموعة المشاريع للديكورات التجارية.' },
-  { year: '2020', en: 'Introduced our sustainability initiative — 40% recycled content lines.', ar: 'أطلقنا مبادرة الاستدامة — خطوط تحتوي على 40% مواد معاد تدويرها.' },
-  { year: '2024', en: 'Serving 500+ design studios across the GCC and MENA region.', ar: 'نخدم أكثر من 500 استوديو تصميم في منطقة الخليج والشرق الأوسط.' },
+  { year: '2015', en: 'Founded with a vision to provide premium fabrics, wallpapers, and curtain solutions that blend exceptional quality with timeless design.', ar: 'تأسست مع رؤية لتقديم أقمشة وورق جدران وحلول أ demanding أن تجمع بين الجودة الاستثنائية والتصميم العصرية.' },
+  { year: '2017', en: 'Built a strong reputation for delivering unique products, superior materials, and professional services driven by creativity, integrity, and craftsmanship.', ar: 'بنى سمعة قوية لتقديم منتجات فريدة، مواد عالية الجودة، وخدمات احترافية تُشغّلها الإبداع والنزاهة والحرفية.' },
+  { year: '2020', en: 'Expanded our expertise by embracing the latest interior design trends and sourcing high-quality materials from trusted international partners.', ar: 'وسّعنا خبراتنا بتمثيل أحدث توجهات تصميم الداخلية وتوظيف مواد عالية الجودة من الشركاء الدوليين الموثوقين.' },
+  { year: '2022', en: "Reinforced our commitment to supporting the ambitions of *Saudi Vision 2030* by delivering sustainable, innovative interior solutions aligned with the Kingdom's evolving standards for quality, design, and environmental responsibility.", ar: 'أكّدنا التزامنا بدعم أحلام *رؤية السعودية 2030* من خلال تقديم حلول ديكور داخلية مستدامة ومبتكرة تتماشى مع معايير المملكة المتقدمة في الجودة والتصميم والمسؤولية البيئية.' },
+  { year: '2026', en: 'Established ourselves as a trusted partner for interior designers, architects, and homeowners, delivering innovative interior solutions that enhance spaces while reducing environmental impact.', ar: 'أقمنا أنفسنا كشريك موثوق لتصميمات الداخلية، والمهندسين، والمساكن، من خلال تقديم حلول ديكور داخلية مبتكرة تحسن المساحات وتقلل من التأثير البيئي.' },
 ]
 
 const values = [

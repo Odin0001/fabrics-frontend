@@ -4,36 +4,14 @@ import { ArrowRight } from 'lucide-react'
 import { useLang, t, ui } from '@/contexts/LangContext'
 
 const services = [
-  {
-    icon: '🎯',
-    en: { title: 'Material Specification', body: 'Expert guidance on selecting the right fabric for every application — performance, aesthetics, and budget all considered. We provide comprehensive specification sheets and sample boards.', tags: ['Upholstery', 'Drapery', 'Wall Covering'] },
-    ar: { title: 'تخصيص المواد', body: 'توجيه خبير في اختيار القماش المناسب لكل تطبيق — مع مراعاة الأداء والجماليات والميزانية. نقدم أوراق مواصفات شاملة ولوحات عينات.', tags: ['تنجيد', 'ستائر', 'أغطية جدران'] },
-  },
-  {
-    icon: '📦',
-    en: { title: 'Contract Supply', body: 'Reliable large-scale supply for hospitality, commercial, and residential projects. Consistent dye lots, assured lead times, and dedicated project management.', tags: ['Hospitality', 'Commercial', 'Residential'] },
-    ar: { title: 'التوريد للمشاريع', body: 'توريد موثوق بكميات كبيرة للضيافة والمشاريع التجارية والسكنية. أصباغ متسقة وأوقات تسليم محددة وإدارة مشاريع مخصصة.', tags: ['الضيافة', 'التجاري', 'السكني'] },
-  },
-  {
-    icon: '🎨',
-    en: { title: 'Design Consultation', body: "One-on-one sessions with our in-house textile specialists. Bring your mood board — we'll help you discover the perfect palette and texture story for your project.", tags: ['Colour Matching', 'Trend Advice', 'Mood Boards'] },
-    ar: { title: 'استشارة التصميم', body: 'جلسات فردية مع متخصصي المنسوجات لدينا. أحضر لوحة مزاجك — سنساعدك على اكتشاف قصة الألوان والملمس المثالية لمشروعك.', tags: ['مطابقة الألوان', 'نصائح الترندات', 'لوحات المزاج'] },
-  },
-  {
-    icon: '🔬',
-    en: { title: 'Sample Service', body: 'Receive physical samples and memo cuttings dispatched within 48 hours anywhere in the GCC. Full sample library access available at our showroom.', tags: ['48h Dispatch', 'Full Library', 'GCC Delivery'] },
-    ar: { title: 'خدمة العينات', body: 'استلم عينات فعلية وقصاصات في غضون 48 ساعة في أي مكان في منطقة الخليج. إمكانية الوصول الكامل لمكتبة العينات في صالة العرض.', tags: ['شحن 48 ساعة', 'مكتبة كاملة', 'توصيل للخليج'] },
-  },
-  {
-    icon: '🌍',
-    en: { title: 'Custom Import', body: "Can't find what you're looking for? We leverage our global mill network to source bespoke quantities, custom colourways, and exclusive weaves for your project.", tags: ['Custom Colour', 'Exclusive Weaves', 'MOQ Flexibility'] },
-    ar: { title: 'الاستيراد المخصص', body: 'لا تجد ما تبحث عنه؟ نستغل شبكة المصانع العالمية لدينا للحصول على كميات مخصصة وألوان فريدة ونسيج حصري لمشروعك.', tags: ['لون مخصص', 'نسيج حصري', 'مرونة الكميات'] },
-  },
-  {
-    icon: '📐',
-    en: { title: 'Technical Support', body: 'Fire-rating certifications, cleaning codes, durability test reports, and installation guides — we provide full technical documentation for every product we supply.', tags: ['Fire Rating', 'Rub Tests', 'Install Guides'] },
-    ar: { title: 'الدعم التقني', body: 'شهادات مقاومة الحريق وأكواد التنظيف وتقارير اختبارات المتانة وأدلة التركيب — نوفر الوثائق التقنية الكاملة لكل منتج نوفره.', tags: ['تقييم الحريق', 'اختبارات الاحتكاك', 'أدلة التركيب'] },
-  },
+  { en: 'Creative Design', ar: 'تصميم إبداعي' },
+  { en: 'Efficient & Effective Planning', ar: 'تخطيط فعّال وكفؤ' },
+  { en: 'Attention to details with quality materials', ar: 'الاهتمام بالتفاصيل مع مواد عالية الجودة' },
+  { en: 'Upholstery', ar: 'التنجيد' },
+  { en: 'All kinds of curtains', ar: 'جميع أنواع الستائر' },
+  { en: 'Wallpaper installation', ar: 'تركيب ورق الجدران' },
+  { en: 'Contract – Residential - Fabrics', ar: 'عقود – سكني – أقمشة' },
+  { en: 'Furniture – Wallpaper – Stretch Fabrics', ar: 'أثاث – ورق جدران – أقمشة مشدودة' },
 ]
 
 export default function ServicesPage() {
@@ -65,25 +43,13 @@ export default function ServicesPage() {
       <section className="py-24 bg-surface" dir={rtl ? 'rtl' : 'ltr'}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((svc) => {
-              const content = rtl ? svc.ar : svc.en
-              return (
-                <div key={svc.en.title} className="border border-border p-8 hover:border-gold transition-all duration-300 group bg-canvas">
-                  <span className="text-3xl mb-5 block">{svc.icon}</span>
-                  <h3 className="font-display text-2xl font-light text-ink mb-4 group-hover:text-gold transition-colors">
-                    {content.title}
-                  </h3>
-                  <p className="text-sm text-muted leading-relaxed mb-6">{content.body}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {content.tags.map((tag) => (
-                      <span key={tag} className="text-[10px] font-medium tracking-widest uppercase px-2.5 py-1 border border-border text-muted group-hover:border-gold/50 transition-colors">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )
-            })}
+            {services.map((svc) => (
+              <div key={svc.en} className="border border-border p-8 hover:border-gold transition-all duration-300 group bg-canvas">
+                <h3 className="font-display text-2xl font-light text-ink group-hover:text-gold transition-colors">
+                  {rtl ? svc.ar : svc.en}
+                </h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>

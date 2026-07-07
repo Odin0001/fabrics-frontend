@@ -1,13 +1,15 @@
 'use client'
 import { useLang, t, ui } from '@/contexts/LangContext'
 
-const industries = [
-  { icon: '🏨', en: 'Hospitality',  ar: 'الضيافة',          count: '80+' },
-  { icon: '🏢', en: 'Commercial',   ar: 'التجاري',           count: '150+' },
-  { icon: '🏡', en: 'Residential',  ar: 'السكني',            count: '200+' },
-  { icon: '🏥', en: 'Healthcare',   ar: 'الرعاية الصحية',    count: '40+' },
-  { icon: '🛍️', en: 'Retail',       ar: 'التجزئة',           count: '30+' },
-  { icon: '🎓', en: 'Education',    ar: 'التعليم',           count: '20+' },
+const clients = [
+  { en: 'Al-Danah Real Estate',        ar: 'شركة الدانة العقارية' },
+  { en: 'Adex Company',                ar: 'شركة أديكس' },
+  { en: 'Kristina Zanic Consultants',  ar: 'كريستينا زانيك للاستشارات' },
+  { en: 'Aydee Design',                ar: 'آيدي للتصميم' },
+  { en: 'Snapchat',                    ar: 'سناب شات' },
+  { en: 'Kingdom Tower',               ar: 'برج المملكة' },
+  { en: 'AL Ula',                      ar: 'العلا' },
+  { en: 'Crowne Plaza',                ar: 'كراون بلازا' },
 ]
 
 const testimonials = [
@@ -31,17 +33,6 @@ const testimonials = [
     en: { role: 'Senior Interior Architect, Fusion Interiors', location: 'Abu Dhabi, UAE', quote: 'I particularly value their custom import service. For a recent palace project we needed specific hand-woven textiles in exact Pantone references — they delivered on every requirement.' },
     ar: { role: 'المهندسة المعمارية الداخلية الأولى، Fusion Interiors', location: 'أبوظبي، الإمارات', quote: 'أقدّر بشكل خاص خدمة الاستيراد المخصص. لمشروع قصر حديث احتجنا لمنسوجات منسوجة يدوياً بألوان Pantone محددة — استوفوا كل متطلب.' },
   },
-]
-
-const clientLogos = [
-  { name: 'Emirates Group', icon: '✈️' },
-  { name: 'DAMAC Properties', icon: '🏗️' },
-  { name: 'Rotana Hotels', icon: '🌟' },
-  { name: 'Aldar Properties', icon: '🏙️' },
-  { name: 'IHG', icon: '🏨' },
-  { name: 'Majid Al Futtaim', icon: '🛒' },
-  { name: 'NEOM', icon: '🌅' },
-  { name: 'Emaar', icon: '🌆' },
 ]
 
 export default function ClientsPage() {
@@ -69,35 +60,16 @@ export default function ClientsPage() {
         </div>
       </section>
 
-      {/* Trusted by logos */}
-      <section className="py-16 bg-ink" dir={rtl ? 'rtl' : 'ltr'}>
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs font-medium tracking-widest uppercase text-canvas/40 text-center mb-10">
-            {t(ui.clients.trustedBy, lang)}
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-px bg-canvas/10">
-            {clientLogos.map((client) => (
-              <div key={client.name} className="bg-ink flex flex-col items-center justify-center py-8 gap-2 hover:bg-canvas/5 transition-colors">
-                <span className="text-2xl">{client.icon}</span>
-                <span className="text-[10px] tracking-wider text-canvas/40 text-center">{client.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries */}
+      {/* Clients */}
       <section className="py-24 bg-surface" dir={rtl ? 'rtl' : 'ltr'}>
         <div className="max-w-7xl mx-auto px-6">
-          <p className="section-label mb-4">{t(ui.clients.industriesLabel, lang)}</p>
-          <h2 className="font-display text-4xl font-light text-ink mb-16">{t(ui.clients.industriesHead, lang)}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {industries.map((ind) => (
-              <div key={ind.en} className="border border-border p-6 text-center hover:border-gold transition-colors group">
-                <span className="text-3xl mb-3 block">{ind.icon}</span>
-                <p className="font-display text-2xl text-gold mb-1">{ind.count}</p>
-                <p className="text-xs font-medium tracking-wide text-muted group-hover:text-ink transition-colors">
-                  {rtl ? ind.ar : ind.en}
+          <p className="section-label mb-4">{t(ui.clients.trustedBy, lang)}</p>
+          <h2 className="font-display text-4xl font-light text-ink mb-16">{t(ui.clients.ourClientsHead, lang)}</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {clients.map((client) => (
+              <div key={client.en} className="border border-border p-6 text-center hover:border-gold transition-colors group">
+                <p className="text-sm font-medium tracking-wide text-muted group-hover:text-ink transition-colors">
+                  {rtl ? client.ar : client.en}
                 </p>
               </div>
             ))}

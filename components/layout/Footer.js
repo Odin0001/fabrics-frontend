@@ -1,18 +1,42 @@
 'use client'
 import Link from 'next/link'
+import { Phone, Mail, MapPin } from 'lucide-react'
 import { useLang, t, ui } from '@/contexts/LangContext'
 import { CATEGORIES } from '@/lib/utils'
+
+const INSTAGRAM_URL = 'https://instagram.com/artiadesign' // TODO: replace with the real Instagram handle/URL
+const PHONE = '0508999109'
+const EMAIL = 'rafat@artiaconsulting.com'
+
+function InstagramIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  )
+}
 
 export default function Footer() {
   const { lang } = useLang()
 
   return (
     <footer className="bg-ink text-canvas/70" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Brand */}
         <div className="md:col-span-1">
           <p className="font-display text-2xl text-canvas font-light mb-4">ARTIA DESIGN</p>
-          <p className="text-sm leading-relaxed">{t(ui.footer.description, lang)}</p>
+          <p className="text-sm leading-relaxed mb-4">{t(ui.footer.description, lang)}</p>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="inline-flex items-center justify-center h-9 w-9 border border-canvas/20 hover:border-gold hover:text-gold transition-colors"
+          >
+            <InstagramIcon className="h-4 w-4" />
+          </a>
         </div>
 
         {/* Collections */}
@@ -42,6 +66,31 @@ export default function Footer() {
             <li><Link href="/projects" className="hover:text-canvas transition-colors">{t(ui.footer.projects,  lang)}</Link></li>
             <li><Link href="/clients"  className="hover:text-canvas transition-colors">{t(ui.footer.clients,   lang)}</Link></li>
             <li><Link href="/contact"  className="hover:text-canvas transition-colors">{t(ui.footer.contact,   lang)}</Link></li>
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h3 className="text-xs font-medium tracking-[0.15em] uppercase text-gold mb-4">
+            {t(ui.footer.contact, lang)}
+          </h3>
+          <ul className="space-y-3 text-sm">
+            <li>
+              <a href={`tel:${PHONE}`} className="flex items-center gap-2 hover:text-canvas transition-colors">
+                <Phone className="h-4 w-4 shrink-0" />
+                <span dir="ltr">{PHONE}</span>
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${EMAIL}`} className="flex items-center gap-2 hover:text-canvas transition-colors">
+                <Mail className="h-4 w-4 shrink-0" />
+                <span dir="ltr">{EMAIL}</span>
+              </a>
+            </li>
+            <li className="flex items-start gap-2">
+              <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
+              <span>{t(ui.footer.address, lang)}</span>
+            </li>
           </ul>
         </div>
       </div>

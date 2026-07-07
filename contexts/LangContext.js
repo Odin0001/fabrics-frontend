@@ -4,10 +4,12 @@ import { createContext, useContext, useEffect, useState } from 'react'
 const LangContext = createContext({ lang: 'en', setLang: () => {} })
 
 export function LangProvider({ children }) {
-  const [lang, setLangState] = useState(() => {
-    if (typeof window === 'undefined') return 'en'
-    return localStorage.getItem('fs_lang') || 'en'
-  })
+  const [lang, setLangState] = useState('en')
+
+  useEffect(() => {
+    const stored = localStorage.getItem('fs_lang')
+    if (stored && stored !== lang) setLangState(stored)
+  }, [])
 
   useEffect(() => {
     document.documentElement.lang = lang
@@ -131,6 +133,7 @@ export const ui = {
     projects:    { en: 'Projects',            ar: 'مشاريعنا' },
     clients:     { en: 'Clients',             ar: 'عملاؤنا' },
     contact:     { en: 'Contact',             ar: 'تواصل معنا' },
+    address:     { en: 'Al Olaya - Silicon Tower 10 - First Floor', ar: 'العليا - برج السليكون 10 - الطابق الأول' },
     rights:      { en: 'All rights reserved.', ar: 'جميع الحقوق محفوظة.' },
     crafted:     { en: 'Crafted with care.',   ar: 'صُنع بعناية.' },
   },
@@ -179,8 +182,7 @@ export const ui = {
     heading:           { en: 'Partners in Success\nAcross the Region', ar: 'شركاء النجاح\nعبر المنطقة' },
     sub:               { en: 'We are proud to serve over 500 interior designers, contractors, and real estate developers across the GCC and MENA region.', ar: 'نفخر بخدمة أكثر من 500 مصمم داخلي وشركة مقاولات ومطور عقاري في منطقة الخليج والشرق الأوسط.' },
     trustedBy:         { en: 'Trusted by',                  ar: 'موثوق من قِبل' },
-    industriesLabel:   { en: 'Industries Served',           ar: 'القطاعات' },
-    industriesHead:    { en: 'We Serve Every Sector',       ar: 'نخدم جميع القطاعات' },
+    ourClientsHead:    { en: 'Companies We\'ve Worked With', ar: 'الشركات التي تعاملنا معها' },
     testimonialsLabel: { en: 'What They Say',               ar: 'ماذا يقولون' },
     testimonialsHead:  { en: 'Client Testimonials',         ar: 'آراء عملائنا' },
   },
