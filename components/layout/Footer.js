@@ -1,10 +1,11 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Mail, MapPin } from 'lucide-react'
 import { useLang, t, ui } from '@/contexts/LangContext'
 import { CATEGORIES } from '@/lib/utils'
 
-const INSTAGRAM_URL = 'https://instagram.com/artiadesign' // TODO: replace with the real Instagram handle/URL
+const INSTAGRAM_URL = 'https://www.instagram.com/artiadesign.sa?igsh=MTV3dDRjaWhpbDY5cg=='
 const PHONE = '0508999109'
 const EMAIL = 'rafat@artiaconsulting.com'
 
@@ -26,7 +27,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Brand */}
         <div className="md:col-span-1">
-          <p className="font-display text-2xl text-canvas font-light mb-4">ARTIA DESIGN</p>
+          <Image
+            src="/logo.jpeg"
+            alt="Artia Design"
+            width={160}
+            height={48}
+            className="h-12 w-auto object-contain mb-4"
+          />
           <p className="text-sm leading-relaxed mb-4">{t(ui.footer.description, lang)}</p>
           <a
             href={INSTAGRAM_URL}

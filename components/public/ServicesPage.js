@@ -4,14 +4,30 @@ import { ArrowRight } from 'lucide-react'
 import { useLang, t, ui } from '@/contexts/LangContext'
 
 const services = [
-  { en: 'Creative Design', ar: 'تصميم إبداعي' },
-  { en: 'Efficient & Effective Planning', ar: 'تخطيط فعّال وكفؤ' },
-  { en: 'Attention to details with quality materials', ar: 'الاهتمام بالتفاصيل مع مواد عالية الجودة' },
-  { en: 'Upholstery', ar: 'التنجيد' },
-  { en: 'All kinds of curtains', ar: 'جميع أنواع الستائر' },
-  { en: 'Wallpaper installation', ar: 'تركيب ورق الجدران' },
-  { en: 'Contract – Residential - Fabrics', ar: 'عقود – سكني – أقمشة' },
-  { en: 'Furniture – Wallpaper – Stretch Fabrics', ar: 'أثاث – ورق جدران – أقمشة مشدودة' },
+  {
+    en: 'Wallcoverings',
+    ar: 'ورق الجدران',
+    descEn: 'Premium wallcovering solutions that enrich interiors with texture, elegance, and character. We supply and install a wide range of natural, vinyl, acoustic, fabric, and custom wallcoverings for luxury residential and commercial projects.',
+    descAr: 'نوفر ونركب مختلف أنواع ورق الجدران الفاخر، بما يشمل الطبيعي، والفينيل، والصوتي، والقماشي، والحلول المخصصة، لنمنح كل مساحة طابعاً مميزاً يعكس هوية المشروع.',
+  },
+  {
+    en: 'Curtains',
+    ar: 'الستائر',
+    descEn: "Custom-made curtain solutions designed to balance aesthetics, privacy, light control, and functionality. Manufactured with precision and tailored to each project's unique requirements.",
+    descAr: 'تصميم وتصنيع وتركيب الستائر حسب الطلب، بما يحقق التوازن بين الجمال، والخصوصية، والتحكم بالإضاءة، مع تنفيذ دقيق يناسب مختلف المشاريع الفاخرة.',
+  },
+  {
+    en: 'Upholstery',
+    ar: 'التنجيد',
+    descEn: 'Premium upholstery fabrics and professional furniture restoration that combine lasting durability with refined comfort and timeless elegance.',
+    descAr: 'توريد أقمشة التنجيد الفاخرة وتجديد الأثاث بحرفية عالية، مع الجمع بين الجودة، والمتانة، والأناقة في كل قطعة.',
+  },
+  {
+    en: 'Project Supply',
+    ar: 'توريد المشاريع',
+    descEn: 'Reliable supply solutions for hotels, villas, palaces, offices, restaurants, and commercial developments, supported by efficient logistics and professional project coordination.',
+    descAr: 'حلول متكاملة لتوريد المواد الداخلية للمشاريع السكنية والتجارية، بما في ذلك الفلل، والقصور، والفنادق، والمكاتب، والمطاعم، مع إدارة احترافية لعمليات التوريد والتنفيذ.',
+  },
 ]
 
 export default function ServicesPage() {
@@ -42,12 +58,15 @@ export default function ServicesPage() {
       {/* Services grid */}
       <section className="py-24 bg-surface" dir={rtl ? 'rtl' : 'ltr'}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((svc) => (
               <div key={svc.en} className="border border-border p-8 hover:border-gold transition-all duration-300 group bg-canvas">
-                <h3 className="font-display text-2xl font-light text-ink group-hover:text-gold transition-colors">
+                <h3 className="font-display text-2xl font-light text-ink group-hover:text-gold transition-colors mb-4">
                   {rtl ? svc.ar : svc.en}
                 </h3>
+                <p className="text-muted leading-relaxed">
+                  {rtl ? svc.descAr : svc.descEn}
+                </p>
               </div>
             ))}
           </div>

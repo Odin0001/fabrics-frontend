@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useLang, t, ui } from '@/contexts/LangContext'
 import { CATEGORIES } from '@/lib/utils'
 
@@ -45,10 +46,14 @@ export default function CategoryLanding() {
               href={`/products/${cat.slug}`}
               className="group block border border-border hover:border-gold transition-colors duration-300 bg-surface hover:bg-surface-2"
             >
-              <div className="aspect-[4/3] flex items-center justify-center bg-surface-2 group-hover:bg-canvas transition-colors duration-300">
-                <span className="text-6xl opacity-60 group-hover:opacity-100 transition-opacity duration-300">
-                  {cat.icon}
-                </span>
+              <div className="relative aspect-[4/3] overflow-hidden bg-surface-2">
+                <Image
+                  src={cat.image}
+                  alt={lang === 'ar' ? cat.label.ar : cat.label.en}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <div className="p-6">
                 <h2 className="font-display text-2xl font-light text-ink group-hover:text-gold transition-colors duration-300 mb-2">

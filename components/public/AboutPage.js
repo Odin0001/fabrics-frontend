@@ -2,32 +2,42 @@
 import { useLang, t, ui } from '@/contexts/LangContext'
 
 const timeline = [
-  { year: '2015', en: 'Founded with a vision to provide premium fabrics, wallpapers, and curtain solutions that blend exceptional quality with timeless design.', ar: 'تأسست مع رؤية لتقديم أقمشة وورق جدران وحلول أ demanding أن تجمع بين الجودة الاستثنائية والتصميم العصرية.' },
-  { year: '2017', en: 'Built a strong reputation for delivering unique products, superior materials, and professional services driven by creativity, integrity, and craftsmanship.', ar: 'بنى سمعة قوية لتقديم منتجات فريدة، مواد عالية الجودة، وخدمات احترافية تُشغّلها الإبداع والنزاهة والحرفية.' },
-  { year: '2020', en: 'Expanded our expertise by embracing the latest interior design trends and sourcing high-quality materials from trusted international partners.', ar: 'وسّعنا خبراتنا بتمثيل أحدث توجهات تصميم الداخلية وتوظيف مواد عالية الجودة من الشركاء الدوليين الموثوقين.' },
-  { year: '2022', en: "Reinforced our commitment to supporting the ambitions of *Saudi Vision 2030* by delivering sustainable, innovative interior solutions aligned with the Kingdom's evolving standards for quality, design, and environmental responsibility.", ar: 'أكّدنا التزامنا بدعم أحلام *رؤية السعودية 2030* من خلال تقديم حلول ديكور داخلية مستدامة ومبتكرة تتماشى مع معايير المملكة المتقدمة في الجودة والتصميم والمسؤولية البيئية.' },
-  { year: '2026', en: 'Established ourselves as a trusted partner for interior designers, architects, and homeowners, delivering innovative interior solutions that enhance spaces while reducing environmental impact.', ar: 'أقمنا أنفسنا كشريك موثوق لتصميمات الداخلية، والمهندسين، والمساكن، من خلال تقديم حلول ديكور داخلية مبتكرة تحسن المساحات وتقلل من التأثير البيئي.' },
+  { year: '2015', en: 'Founded with a vision to provide premium fabrics, wallpapers, and curtain solutions that blend exceptional quality with timeless design.', ar: 'انطلقت رحلتنا برؤية واضحة لتوفير الأقمشة الفاخرة، وأغطية الجدران، وحلول الستائر التي تجمع بين الجودة الاستثنائية والتصاميم الخالدة.' },
+  { year: '2017', en: 'Built a strong reputation for delivering unique products, superior materials, and professional services driven by creativity, integrity, and craftsmanship.', ar: 'رسّخنا مكانتنا من خلال تقديم منتجات مميزة، ومواد عالية الجودة، وخدمات احترافية ترتكز على الإبداع، والنزاهة، وإتقان الحِرفة.' },
+  { year: '2020', en: 'Expanded our expertise by embracing the latest interior design trends and sourcing high-quality materials from trusted international partners.', ar: 'وسعنا نطاق خبراتنا بمواكبة أحدث توجهات التصميم الداخلي، واختيار أجود المواد من شركاء دوليين موثوقين.' },
+  { year: '2022', en: "Reinforced our commitment to supporting the ambitions of *Saudi Vision 2030* by delivering sustainable, innovative interior solutions aligned with the Kingdom's evolving standards for quality, design, and environmental responsibility.", ar: 'عززنا التزامنا بدعم من رؤية السعودية 2030 عبر تقديم حلول داخلية مستدامة ومبتكرة، تتماشى مع تطلعات المملكة نحو أعلى معايير الجودة، والتصميم، والمسؤولية البيئية.' },
+  { year: '2026', en: 'Established ourselves as a trusted partner for interior designers, architects, and homeowners, delivering innovative interior solutions that enhance spaces while reducing environmental impact.', ar: 'أصبحنا شريكًا موثوقًا لمصممي الديكور الداخلي، والمهندسين المعماريين، وأصحاب المنازل، من خلال تقديم حلول داخلية مبتكرة ترتقي بجمال المساحات، وتسهم في الحد من الأثر البيئي.' },
 ]
 
 const values = [
   {
     icon: '🎨',
-    en: { title: 'Design First', body: 'Every fabric is selected for its aesthetic merit before anything else. Beauty is non-negotiable.' },
+    en: { title: 'Curated for Exceptional Interiors', body: 'A refined selection of wallcoverings and fabrics chosen to elevate distinctive spaces.' },
     ar: { title: 'التصميم أولاً', body: 'كل قماش يُختار أولاً لقيمته الجمالية. الجمال ليس قابلاً للتفاوض.' },
   },
   {
     icon: '🤝',
-    en: { title: 'Trusted Partnerships', body: 'We build long-term relationships with mills who share our commitment to quality and ethics.' },
+    en: { title: 'Built Around Design Intent', body: 'Every material recommendation is guided by the project’s vision, character, and desired experience.' },
     ar: { title: 'شراكات موثوقة', body: 'نبني علاقات طويلة الأمد مع الموردين الذين يشاركوننا الالتزام بالجودة والأخلاق.' },
   },
   {
     icon: '🌱',
-    en: { title: 'Responsible Sourcing', body: 'We hold ourselves accountable for the environmental and social impact of every material we carry.' },
+    en: { title: 'Reliable From Selection to Installation', body: 'A seamless process supported by clear communication, dependable timelines, and professional execution.' },
     ar: { title: 'مصادر مسؤولة', body: 'نحاسب أنفسنا على التأثير البيئي والاجتماعي لكل مادة نتعامل بها.' },
   },
   {
     icon: '💡',
-    en: { title: 'Expertise', body: 'Decades of textile knowledge at your service — from specification to installation guidance.' },
+    en: { title: 'Attention to Every Detail', body: 'Because luxury is defined not only by materials, but by how they are delivered and installed.' },
+    ar: { title: 'الخبرة', body: 'عقود من المعرفة بالمنسوجات في خدمتك — من التخصيص إلى توجيه التركيب.' },
+  },
+  {
+    icon: '💡',
+    en: { title: 'A Trusted Project Partner', body: 'Supporting designers, architects, and contractors with responsive service and practical solutions.' },
+    ar: { title: 'الخبرة', body: 'عقود من المعرفة بالمنسوجات في خدمتك — من التخصيص إلى توجيه التركيب.' },
+  },
+  {
+    icon: '💡',
+    en: { title: 'Quality Without Compromise', body: 'Premium materials, skilled craftsmanship, and a commitment to excellence at every stage.' },
     ar: { title: 'الخبرة', body: 'عقود من المعرفة بالمنسوجات في خدمتك — من التخصيص إلى توجيه التركيب.' },
   },
 ]
@@ -58,7 +68,7 @@ export default function AboutPage() {
           <h1 className="font-display text-6xl md:text-7xl font-light text-ink leading-none mb-8 animate-fade-up animate-delay-100 whitespace-pre-line">
             {t(ui.about.heading, lang)}
           </h1>
-          <p className="text-muted text-lg leading-relaxed max-w-xl animate-fade-up animate-delay-200">
+          <p className="text-muted text-justify text-lg leading-relaxed max-w-xl animate-fade-up animate-delay-200">
             {t(ui.about.sub, lang)}
           </p>
         </div>

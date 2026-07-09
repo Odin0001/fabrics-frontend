@@ -6,23 +6,18 @@ import { useLang, t, ui } from '@/contexts/LangContext'
 const contactInfo = [
   {
     icon: MapPin,
-    en: { label: 'Showroom', value: 'Dubai Design District (d3), Building 5, Unit 201\nDubai, United Arab Emirates' },
-    ar: { label: 'صالة العرض', value: 'دبي ديزاين ديستريكت (d3)، مبنى 5، وحدة 201\nدبي، الإمارات العربية المتحدة' },
+    en: { label: 'Location', value: 'Al Olaya - Silicon Tower 10 - First Floor' },
+    ar: { label: 'الموقع', value: 'العليا - برج السليكون 10 - الطابق الأول' },
   },
   {
     icon: Phone,
-    en: { label: 'Phone', value: '+971 4 XXX XXXX' },
-    ar: { label: 'الهاتف', value: '+971 4 XXX XXXX' },
+    en: { label: 'Phone', value: '0508999109' },
+    ar: { label: 'الهاتف', value: '0508999109' },
   },
   {
     icon: Mail,
-    en: { label: 'Email', value: 'hello@fabricstore.ae' },
-    ar: { label: 'البريد الإلكتروني', value: 'hello@fabricstore.ae' },
-  },
-  {
-    icon: Clock,
-    en: { label: 'Showroom Hours', value: 'Sun – Thu: 9:00 AM – 6:00 PM\nFri: 9:00 AM – 1:00 PM' },
-    ar: { label: 'ساعات صالة العرض', value: 'الأحد – الخميس: 9:00 ص – 6:00 م\nالجمعة: 9:00 ص – 1:00 م' },
+    en: { label: 'Email', value: 'rafat@artiaconsulting.com' },
+    ar: { label: 'البريد الإلكتروني', value: 'rafat@artiaconsulting.com' },
   },
 ]
 
@@ -95,15 +90,6 @@ export default function ContactPage() {
                   </div>
                 )
               })}
-            </div>
-
-            <div className="border border-border p-6 bg-canvas">
-              <p className="text-xs font-medium tracking-widest uppercase text-gold mb-3">
-                {t(ui.contact.tradeLabel, lang)}
-              </p>
-              <p className="text-sm text-muted leading-relaxed">
-                {t(ui.contact.tradeBody, lang)}
-              </p>
             </div>
           </div>
 

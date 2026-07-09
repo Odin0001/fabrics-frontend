@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X, Globe } from 'lucide-react'
 import { useLang, t, ui } from '@/contexts/LangContext'
@@ -20,8 +21,8 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/',         label: t(ui.nav.home, lang) },
-    { href: '/products', label: t(ui.nav.products, lang), hasDrop: true },
     { href: '/about',    label: t(ui.nav.about, lang) },
+    { href: '/products', label: t(ui.nav.products, lang), hasDrop: true },
     { href: '/services', label: t(ui.nav.services, lang) },
     { href: '/projects', label: t(ui.nav.projects, lang) },
     { href: '/clients',  label: t(ui.nav.clients, lang) },
@@ -41,11 +42,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-display text-2xl font-light tracking-wide text-gold hover:text-ink transition-colors"
-        >
-          ARTIA DESIGN
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Artia Design"
+            width={160}
+            height={48}
+            priority
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop nav */}
