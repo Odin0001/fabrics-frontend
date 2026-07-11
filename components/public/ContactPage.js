@@ -6,13 +6,13 @@ import { useLang, t, ui } from '@/contexts/LangContext'
 const contactInfo = [
   {
     icon: MapPin,
-    en: { label: 'Location', value: 'Al Olaya - Silicon Tower 10 - First Floor' },
-    ar: { label: 'الموقع', value: 'العليا - برج السليكون 10 - الطابق الأول' },
+    en: { label: 'Location', value: 'Al Olaya - Silicon Tower 10 - First Floor, Riyadh, Saudi Arabia' },
+    ar: { label: 'الموقع', value: 'العليا - برج السليكون 10 - الطابق الأول, الرياض, المملكة العربية السعودية' },
   },
   {
     icon: Phone,
-    en: { label: 'Phone', value: '0508999109' },
-    ar: { label: 'الهاتف', value: '0508999109' },
+    en: { label: 'Phone', value: '+966 0508999109' },
+    ar: { label: 'الهاتف', value: '+966 0508999109' },
   },
   {
     icon: Mail,

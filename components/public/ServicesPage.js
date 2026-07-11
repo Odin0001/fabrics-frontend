@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { useLang, t, ui } from '@/contexts/LangContext'
@@ -9,24 +10,28 @@ const services = [
     ar: 'ورق الجدران',
     descEn: 'Premium wallcovering solutions that enrich interiors with texture, elegance, and character. We supply and install a wide range of natural, vinyl, acoustic, fabric, and custom wallcoverings for luxury residential and commercial projects.',
     descAr: 'نوفر ونركب مختلف أنواع ورق الجدران الفاخر، بما يشمل الطبيعي، والفينيل، والصوتي، والقماشي، والحلول المخصصة، لنمنح كل مساحة طابعاً مميزاً يعكس هوية المشروع.',
+    image: '/wall-covering.jpg',
   },
   {
     en: 'Curtains',
     ar: 'الستائر',
     descEn: "Custom-made curtain solutions designed to balance aesthetics, privacy, light control, and functionality. Manufactured with precision and tailored to each project's unique requirements.",
     descAr: 'تصميم وتصنيع وتركيب الستائر حسب الطلب، بما يحقق التوازن بين الجمال، والخصوصية، والتحكم بالإضاءة، مع تنفيذ دقيق يناسب مختلف المشاريع الفاخرة.',
+    image: '/curtains.jpg',
   },
   {
     en: 'Upholstery',
     ar: 'التنجيد',
     descEn: 'Premium upholstery fabrics and professional furniture restoration that combine lasting durability with refined comfort and timeless elegance.',
     descAr: 'توريد أقمشة التنجيد الفاخرة وتجديد الأثاث بحرفية عالية، مع الجمع بين الجودة، والمتانة، والأناقة في كل قطعة.',
+    image: '/upholstery.jpg',
   },
   {
     en: 'Project Supply',
     ar: 'توريد المشاريع',
     descEn: 'Reliable supply solutions for hotels, villas, palaces, offices, restaurants, and commercial developments, supported by efficient logistics and professional project coordination.',
     descAr: 'حلول متكاملة لتوريد المواد الداخلية للمشاريع السكنية والتجارية، بما في ذلك الفلل، والقصور، والفنادق، والمكاتب، والمطاعم، مع إدارة احترافية لعمليات التوريد والتنفيذ.',
+    image: '/trusted-prohect-partner.jpeg',
   },
 ]
 
@@ -60,13 +65,24 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((svc) => (
-              <div key={svc.en} className="border border-border p-8 hover:border-gold transition-all duration-300 group bg-canvas">
-                <h3 className="font-display text-2xl font-light text-ink group-hover:text-gold transition-colors mb-4">
-                  {rtl ? svc.ar : svc.en}
-                </h3>
-                <p className="text-muted leading-relaxed">
-                  {rtl ? svc.descAr : svc.descEn}
-                </p>
+              <div key={svc.en} className="border border-border hover:border-gold transition-all duration-300 group bg-canvas overflow-hidden">
+                <div className="relative w-full aspect-[16/9] overflow-hidden">
+                  <Image
+                    src={svc.image}
+                    alt={rtl ? svc.ar : svc.en}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="font-display text-2xl font-light text-ink group-hover:text-gold transition-colors mb-4">
+                    {rtl ? svc.ar : svc.en}
+                  </h3>
+                  <p className="text-muted leading-relaxed">
+                    {rtl ? svc.descAr : svc.descEn}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

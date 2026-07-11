@@ -1,15 +1,16 @@
 'use client'
+import Image from 'next/image'
 import { useLang, t, ui } from '@/contexts/LangContext'
 
 const clients = [
-  { en: 'Al-Danah Real Estate',        ar: 'شركة الدانة العقارية' },
-  { en: 'Adex Company',                ar: 'شركة أديكس' },
-  { en: 'Kristina Zanic Consultants',  ar: 'كريستينا زانيك للاستشارات' },
-  { en: 'Aydee Design',                ar: 'آيدي للتصميم' },
-  { en: 'Snapchat',                    ar: 'سناب شات' },
-  { en: 'Kingdom Tower',               ar: 'برج المملكة' },
-  { en: 'AL Ula',                      ar: 'العلا' },
-  { en: 'Crowne Plaza',                ar: 'كراون بلازا' },
+  { en: 'Al-Danah Real Estate',        ar: 'شركة الدانة العقارية',       logo: '/dana.jpeg' },
+  { en: 'Adex Company',                ar: 'شركة أديكس',                logo: '/adex.jpeg' },
+  { en: 'Kristina Zanic Consultants',  ar: 'كريستينا زانيك للاستشارات', logo: '/kristina.jpeg' },
+  { en: 'Aydee Design',                ar: 'آيدي للتصميم',              logo: '/aydee.jpeg' },
+  { en: 'Snapchat',                    ar: 'سناب شات',                  logo: '/snapchat.jpeg' },
+  { en: 'Kingdom Tower',               ar: 'برج المملكة',               logo: '/kingdom.jpeg' },
+  { en: 'AL Ula',                      ar: 'العلا',                     logo: '/al-ula.jpeg' },
+  { en: 'Crowne Plaza',                ar: 'كراون بلازا',               logo: '/crowne.jpeg' },
 ]
 
 const testimonials = [
@@ -65,12 +66,22 @@ export default function ClientsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-4">{t(ui.clients.trustedBy, lang)}</p>
           <h2 className="font-display text-4xl font-light text-ink mb-16">{t(ui.clients.ourClientsHead, lang)}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="flex items-center gap-4 overflow-x-auto pb-4 -mx-6 px-6 md:mx-0 md:px-0 md:flex-wrap md:justify-between md:overflow-visible">
             {clients.map((client) => (
-              <div key={client.en} className="border border-border p-6 text-center hover:border-gold transition-colors group">
-                <p className="text-sm font-medium tracking-wide text-muted group-hover:text-ink transition-colors">
-                  {rtl ? client.ar : client.en}
-                </p>
+              <div
+                key={client.en}
+                title={rtl ? client.ar : client.en}
+                className="shrink-0 w-40 h-24 md:w-[11%] flex items-center justify-center border border-border p-4 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:border-gold transition-all duration-300"
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={client.logo}
+                    alt={rtl ? client.ar : client.en}
+                    fill
+                    sizes="200px"
+                    className="object-contain"
+                  />
+                </div>
               </div>
             ))}
           </div>

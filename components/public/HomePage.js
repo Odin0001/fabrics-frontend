@@ -1,5 +1,6 @@
 'use client'
 import { useQuery } from '@tanstack/react-query'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { productsApi } from '@/lib/api'
@@ -77,15 +78,23 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
             {CATEGORIES.map((cat, i) => (
               <Link
                 key={cat.value}
                 href={`/products?category=${cat.value}`}
-                className="group flex flex-col items-center gap-3 py-8 border border-border hover:border-gold hover:bg-canvas transition-all duration-300"
+                className="group flex flex-col items-center gap-3 pb-6 border border-border hover:border-gold transition-all duration-300 overflow-hidden"
                 style={{ animationDelay: `${i * 60}ms` }}
               >
-                <span className="text-2xl">{cat.icon}</span>
+                <div className="relative w-full aspect-square overflow-hidden bg-surface-2">
+                  <Image
+                    src={cat.image}
+                    alt={lang === 'ar' ? cat.label.ar : cat.label.en}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 14vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
                 <span className="text-xs font-medium tracking-wide text-center text-muted group-hover:text-ink transition-colors">
                   {lang === 'ar' ? cat.label.ar : cat.label.en}
                 </span>

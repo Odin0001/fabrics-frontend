@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useLang, t, ui } from '@/contexts/LangContext'
 
 const timeline = [
@@ -11,32 +12,32 @@ const timeline = [
 
 const values = [
   {
-    icon: '🎨',
+    image: '/curated.jpeg',
     en: { title: 'Curated for Exceptional Interiors', body: 'A refined selection of wallcoverings and fabrics chosen to elevate distinctive spaces.' },
     ar: { title: 'التصميم أولاً', body: 'كل قماش يُختار أولاً لقيمته الجمالية. الجمال ليس قابلاً للتفاوض.' },
   },
   {
-    icon: '🤝',
+    image: '/design-intent.jpeg',
     en: { title: 'Built Around Design Intent', body: 'Every material recommendation is guided by the project’s vision, character, and desired experience.' },
     ar: { title: 'شراكات موثوقة', body: 'نبني علاقات طويلة الأمد مع الموردين الذين يشاركوننا الالتزام بالجودة والأخلاق.' },
   },
   {
-    icon: '🌱',
+    image: '/reliable.jpeg',
     en: { title: 'Reliable From Selection to Installation', body: 'A seamless process supported by clear communication, dependable timelines, and professional execution.' },
     ar: { title: 'مصادر مسؤولة', body: 'نحاسب أنفسنا على التأثير البيئي والاجتماعي لكل مادة نتعامل بها.' },
   },
   {
-    icon: '💡',
+    image: '/attention-to-every-detail.jpeg',
     en: { title: 'Attention to Every Detail', body: 'Because luxury is defined not only by materials, but by how they are delivered and installed.' },
     ar: { title: 'الخبرة', body: 'عقود من المعرفة بالمنسوجات في خدمتك — من التخصيص إلى توجيه التركيب.' },
   },
   {
-    icon: '💡',
+    image: '/trusted-prohect-partner.jpeg',
     en: { title: 'A Trusted Project Partner', body: 'Supporting designers, architects, and contractors with responsive service and practical solutions.' },
     ar: { title: 'الخبرة', body: 'عقود من المعرفة بالمنسوجات في خدمتك — من التخصيص إلى توجيه التركيب.' },
   },
   {
-    icon: '💡',
+    image: '/quality-without-compromise.jpeg',
     en: { title: 'Quality Without Compromise', body: 'Premium materials, skilled craftsmanship, and a commitment to excellence at every stage.' },
     ar: { title: 'الخبرة', body: 'عقود من المعرفة بالمنسوجات في خدمتك — من التخصيص إلى توجيه التركيب.' },
   },
@@ -125,12 +126,22 @@ export default function AboutPage() {
           <h2 className="font-display text-4xl font-light text-ink mb-16">{t(ui.about.valuesHead, lang)}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((v) => (
-              <div key={v.en.title} className="border border-border p-8 hover:border-gold transition-colors duration-300 group">
-                <span className="text-3xl mb-4 block">{v.icon}</span>
-                <h3 className="font-display text-xl text-ink mb-3 group-hover:text-gold transition-colors">
-                  {rtl ? v.ar.title : v.en.title}
-                </h3>
-                <p className="text-sm text-muted leading-relaxed">{rtl ? v.ar.body : v.en.body}</p>
+              <div key={v.en.title} className="border border-border hover:border-gold transition-colors duration-300 group overflow-hidden">
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={v.image}
+                    alt={rtl ? v.ar.title : v.en.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="font-display text-xl text-ink mb-3 group-hover:text-gold transition-colors">
+                    {rtl ? v.ar.title : v.en.title}
+                  </h3>
+                  <p className="text-sm text-muted leading-relaxed">{rtl ? v.ar.body : v.en.body}</p>
+                </div>
               </div>
             ))}
           </div>
