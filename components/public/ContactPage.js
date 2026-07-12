@@ -16,8 +16,8 @@ const contactInfo = [
   },
   {
     icon: Mail,
-    en: { label: 'Email', value: 'rafat@artiaconsulting.com' },
-    ar: { label: 'البريد الإلكتروني', value: 'rafat@artiaconsulting.com' },
+    en: { label: 'Email', value: 'info@artiaconsulting.com' },
+    ar: { label: 'البريد الإلكتروني', value: 'info@artiaconsulting.com' },
   },
 ]
 
