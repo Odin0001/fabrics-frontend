@@ -2,7 +2,7 @@
 import { useQuery } from '@tanstack/react-query'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ArrowLeft } from 'lucide-react'
 import { productsApi } from '@/lib/api'
 import { useLang, t, ui } from '@/contexts/LangContext'
 import { CATEGORIES } from '@/lib/utils'
@@ -51,7 +51,7 @@ export default function HomePage() {
             <div className="flex items-center gap-4 animate-fade-up animate-delay-300">
               <Link href="/products" className="btn-primary">
                 {t(ui.hero.cta, lang)}
-                <ArrowRight className="h-4 w-4" />
+                {lang === 'ar' ? <ArrowLeft className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
               </Link>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function HomePage() {
               </h2>
             </div>
             <Link href="/products" className="btn-ghost hidden md:flex">
-              {t(ui.product.viewAll, lang)} <ArrowRight className="h-4 w-4" />
+              {t(ui.product.viewAll, lang)} {lang === 'ar' ? <ArrowLeft className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
             </Link>
           </div>
 
@@ -109,13 +109,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-end justify-between mb-12">
             <div>
-              <p className="section-label mb-3">{t(ui.home.handpicked, lang)}</p>
               <h2 className="font-display text-4xl font-light text-ink">
                 {t(ui.home.featuredHead, lang)}
               </h2>
             </div>
             <Link href="/products?is_featured=true" className="btn-ghost hidden md:flex">
-              {t(ui.product.viewAll, lang)} <ArrowRight className="h-4 w-4" />
+              {t(ui.product.viewAll, lang)} {lang === 'ar' ? <ArrowLeft className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
             </Link>
           </div>
 

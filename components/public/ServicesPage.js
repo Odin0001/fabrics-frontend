@@ -9,7 +9,7 @@ const services = [
     en: 'Wallcoverings',
     ar: 'ورق الجدران',
     descEn: 'Premium wallcovering solutions that enrich interiors with texture, elegance, and character. We supply and install a wide range of natural, vinyl, acoustic, fabric, and custom wallcoverings for luxury residential and commercial projects.',
-    descAr: 'نوفر ونركب مختلف أنواع ورق الجدران الفاخر، بما يشمل الطبيعي، والفينيل، والصوتي، والقماشي، والحلول المخصصة، لنمنح كل مساحة طابعاً مميزاً يعكس هوية المشروع.',
+    descAr: 'نوفر ونركب مختلف أنواع ورق الجدران الفاخر، بما يشمل الطبيعي، والفينيل، و العازل للصوت، والقماشي، والحلول المخصصة، لنمنح كل مساحة طابعاً مميزاً يعكس هوية المشروع.',
     image: '/wall-covering.jpg',
   },
   {

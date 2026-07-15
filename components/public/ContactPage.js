@@ -85,7 +85,12 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-xs font-medium tracking-widest uppercase text-muted mb-1">{content.label}</p>
-                      <p className="text-sm text-ink whitespace-pre-line leading-relaxed">{content.value}</p>
+                      <p
+                        className="text-sm text-ink whitespace-pre-line leading-relaxed"
+                        style={item.icon === Phone ? { direction: 'ltr', unicodeBidi: 'plaintext' } : undefined}
+                      >
+                        {content.value}
+                      </p>
                     </div>
                   </div>
                 )

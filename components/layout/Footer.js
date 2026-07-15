@@ -6,7 +6,7 @@ import { useLang, t, ui } from '@/contexts/LangContext'
 import { CATEGORIES } from '@/lib/utils'
 
 const INSTAGRAM_URL = 'https://www.instagram.com/artiadesign.sa?igsh=MTV3dDRjaWhpbDY5cg=='
-const PHONE = '0508999109'
+const PHONE = '+966 0508999109'
 const EMAIL = 'info@artiaconsulting.com'
 
 function InstagramIcon(props) {

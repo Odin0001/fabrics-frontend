@@ -5,17 +5,17 @@ const projects = [
   {
     id: 1,
     en: { title: 'Furnishing House Co.', body: 'Under the Supervision of SELA Consulting Co., Via Riyadh Project.' },
-    ar: { title: 'منزل التجهيز', body: 'تحت إشراف شركة SELA Consulting Co., مشروع في الرياض.' },
+    ar: { title: 'تجهيز منازل', body: 'تحت إشراف شركة SELA Consulting Co., مشروع في الرياض.' },
   },
   {
     id: 2,
     en: { title: 'Buthaina Humaidy Interiors', body: 'Supply and Apply the High Quality of Fabrics & Install Curtains.' },
-    ar: { title: 'ديكورات بوثينة حميدي', body: 'توفير وتطبيق أعلى جودة من الأقمشة وتركيب الستائر.' },
+    ar: { title: 'ديكورات بثينة حميدي', body: 'توفير وتطبيق أعلى جودة من الأقمشة وتركيب الستائر.' },
   },
   {
     id: 3,
     en: { title: 'Modern Building Leaders Co. MBL', body: 'Private complex – Curtains & Furniture.' },
-    ar: { title: 'البناء الحديث قيادة شركات MBL', body: 'مجموعة مخصصة من الأقمشة والستائر والديكورات السكنية الخاصة.' },
+    ar: { title: 'البناء الحديث لشركات MBL', body: 'مجموعة مخصصة من الأقمشة والستائر والديكورات السكنية الخاصة.' },
   },
   {
     id: 4,

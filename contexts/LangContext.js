@@ -97,7 +97,7 @@ export const ui = {
   hero: {
     eyebrow: { en: 'Premium Textiles & Surfaces',  ar: 'منسوجات ومساطح راقية' },
     heading: { en: 'Where Threads \nBecome Art.',  ar: 'حيث تتحول الخيوط\nإلى فن' },
-    sub:     { en: "Curated upholstery, leather, wallcovering, and more — sourced from the world's finest ateliers.", ar: 'تنجيد وجلود وأغطية جدران منتقاة بعناية — من أرقى مراسم العالم.' },
+    sub:     { en: "Curated upholstery, leather, wallcovering, and more — sourced from the world's finest ateliers.", ar: 'تنجيد وجلود وأغطية جدران منتقاة بعناية من أرقى المعامل في العالم.' },
     cta:     { en: 'Explore Collection',           ar: 'استكشف المجموعة' },
   },
 
@@ -113,7 +113,6 @@ export const ui = {
 
   // ── Home page ─────────────────────────────────────────────────────────────
   home: {
-    handpicked:     { en: 'Handpicked',              ar: 'منتجات مختارة' },
     featuredHead:   { en: 'Featured Products',       ar: 'المنتجات المميزة' },
     noFeatured:     { en: 'No featured products yet', ar: 'لا توجد منتجات مميزة' },
     allProducts:    { en: 'All Products',             ar: 'جميع المنتجات' },
@@ -133,7 +132,7 @@ export const ui = {
     projects:    { en: 'Projects',            ar: 'مشاريعنا' },
     clients:     { en: 'Clients',             ar: 'عملاؤنا' },
     contact:     { en: 'Contact',             ar: 'تواصل معنا' },
-    address:     { en: 'Al Olaya - Silicon Tower 10 - First Floor', ar: 'العليا - برج السليكون 10 - الطابق الأول' },
+    address:     { en: 'Al Olaya - Silicon Tower 10 - First Floor, Riyadh, Saudi Arabia', ar: 'العليا - برج السليكون 10 - الطابق الأول, الرياض, المملكة العربية السعودية' },
     rights:      { en: 'All rights reserved.', ar: 'جميع الحقوق محفوظة.' },
     crafted:     { en: 'Crafted with care.',   ar: 'صُنع بعناية.' },
   },
@@ -142,11 +141,11 @@ export const ui = {
   about: {
     eyebrow:       { en: 'About Us',                                ar: 'من نحن' },
     heading:       { en: 'A Story of Craft\nand Material Excellence', ar: 'حكاية الحرفية\nوالمواد الراقية' },
-    sub:           { en: "We have created a very good reputation for providing unique products, quality materials, and professional services. We credit this success to a combination of talent, integrity, and creativity within the art of fabrics, wallpapers, and curtains. \n \n Our understanding of the proper materials, professional quality, and industry fashion trends became our development strategy. In alignment with international industry standards, professional know-how, and eco-friendly partners, our aim is to improve the quality of life and reduce our environmental footprint through the provision of sound, eco-friendly, professional, and leading-edge interior services.", ar: 'منذ عام 2008، نختار بعناية أرقى الأقمشة والأسطح من أفضل مراسم العالم لتلهم مصممي الديكور والمنشآت في المنطقة.' },
+    sub:           { en: "We have created a very good reputation for providing unique products, quality materials, and professional services. We credit this success to a combination of talent, integrity, and creativity within the art of fabrics, wallpapers, and curtains. \n \n Our understanding of the proper materials, professional quality, and industry fashion trends became our development strategy. In alignment with international industry standards, professional know-how, and eco-friendly partners, our aim is to improve the quality of life and reduce our environmental footprint through the provision of sound, eco-friendly, professional, and leading-edge interior services.", ar: 'منذ عام 2015، نختار بعناية أرقى الأقمشة من أفضل الموردين في العالم لتلهم مصممي الديكور والمنشآت في المنطقة.' },
     missionLabel:  { en: 'Our Mission',                             ar: 'مهمتنا' },
     missionHead:   { en: 'Making Excellence Accessible',            ar: 'نجعل التميّز في المتناول' },
     missionP1:     { en: "Our Logo reflects philosophy in the domain of interior decoration and furniture; it reflects the fashion, colors and art of decoration", ar: 'شعارنا يعكس فلسفة في مجال تزيين الداخل والأثاث؛ فهو يعكس الأزياء والألوان والفن في التزيين' },
-    missionP2:     { en: "Our team of specialists understands designers' language and knows project challenges — from initial specification to final delivery.", ar: 'فريقنا من المتخصصين يفهم لغة المصممين ويعرف تحديات المشاريع — من المواصفات الأولية حتى التسليم النهائي.' },
+    missionP2:     { en: "Our team of specialists understands designers' language and knows project challenges — from initial specification to final delivery.", ar: 'فريقنا من المتخصصين يفهم لغة المصممين ويعرف تحديات المشاريع من المواصفات الأولية حتى التسليم النهائي.' },
     journeyLabel:  { en: 'Our Journey',                             ar: 'رحلتنا' },
     journeyHead:   { en: 'Decades of Growth',                       ar: 'عقود من التطور' },
     valuesLabel:   { en: 'Our Values',                              ar: 'قيمنا' },
@@ -190,8 +189,8 @@ export const ui = {
   // ── Contact page ─────────────────────────────────────────────────────────
   contact: {
     eyebrow:     { en: 'Get in Touch',                ar: 'تواصل معنا' },
-    heading:     { en: "Let's Start\na Conversation", ar: 'لنبدأ\nحواراً' },
-    sub:         { en: "Whether you're looking for a specific product, need samples, or want a consultation for your project — our team is ready to help.", ar: 'سواء كنت تبحث عن منتج محدد، تحتاج عينات، أو تريد استشارة لمشروعك — فريقنا مستعد للمساعدة.' },
+    heading:     { en: "Let's Start\na Project", ar: 'لنبدأ\nمشروعًا' },
+    sub:         { en: "Whether you're looking for a specific product, need samples, or want a consultation for your project — our team is ready to help.", ar: 'سواء كنت تبحث عن منتج محدد، تحتاج عينات، أو تريد استشارة لمشروعك فريقنا مستعد للمساعدة.' },
     infoLabel:   { en: 'Contact Information',         ar: 'معلومات الاتصال' },
     infoHead:    { en: "We're Here to Help",          ar: 'نحن هنا لمساعدتك' },
    

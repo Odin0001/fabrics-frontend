@@ -29,17 +29,17 @@ const values = [
   {
     image: '/attention-to-every-detail.jpeg',
     en: { title: 'Attention to Every Detail', body: 'Because luxury is defined not only by materials, but by how they are delivered and installed.' },
-    ar: { title: 'الخبرة', body: 'عقود من المعرفة بالمنسوجات في خدمتك — من التخصيص إلى توجيه التركيب.' },
+    ar: { title: 'الاهتمام بكل التفاصيل', body: 'نحن نولي اهتماماً كبيراً لكل التفاصيل لضمان تقديم أفضل النتائج.' },
   },
   {
     image: '/trusted-prohect-partner.jpeg',
     en: { title: 'A Trusted Project Partner', body: 'Supporting designers, architects, and contractors with responsive service and practical solutions.' },
-    ar: { title: 'الخبرة', body: 'عقود من المعرفة بالمنسوجات في خدمتك — من التخصيص إلى توجيه التركيب.' },
+    ar: { title: 'شريك موثوق للمشاريع', body: 'دعم المصممين و المهندسين والمقاولين بخدمات سريعة وحلول عملية.' },
   },
   {
     image: '/quality-without-compromise.jpeg',
     en: { title: 'Quality Without Compromise', body: 'Premium materials, skilled craftsmanship, and a commitment to excellence at every stage.' },
-    ar: { title: 'الخبرة', body: 'عقود من المعرفة بالمنسوجات في خدمتك — من التخصيص إلى توجيه التركيب.' },
+    ar: { title: 'الجودة بلا تنازل', body: 'نحن نضمن الجودة العالية في كل مرحلة من مراحل المشروع.' },
   },
 ]
 
@@ -63,7 +63,7 @@ export default function AboutPage() {
             style={{ backgroundImage: 'repeating-linear-gradient(0deg,#1C1917 0,transparent 1px,transparent 79px,#1C1917 80px),repeating-linear-gradient(90deg,#1C1917 0,transparent 1px,transparent 79px,#1C1917 80px)' }}
           />
         </div>
-        <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-transparent via-gold to-transparent opacity-60" />
+        <div className="absolute start-0 top-0 w-1 h-full bg-gradient-to-b from-transparent via-gold to-transparent opacity-60" />
         <div className="relative max-w-7xl mx-auto px-6">
           <p className="section-label mb-6 animate-fade-up">{t(ui.about.eyebrow, lang)}</p>
           <h1 className="font-display text-6xl md:text-7xl font-light text-ink leading-none mb-8 animate-fade-up animate-delay-100 whitespace-pre-line">
@@ -103,7 +103,7 @@ export default function AboutPage() {
           <p className="section-label mb-4">{t(ui.about.journeyLabel, lang)}</p>
           <h2 className="font-display text-4xl font-light text-ink mb-16">{t(ui.about.journeyHead, lang)}</h2>
           <div className="relative">
-            <div className="absolute left-16 top-0 bottom-0 w-px bg-border" />
+            <div className="absolute start-16 top-0 bottom-0 w-px bg-border" />
             <div className="space-y-12">
               {timeline.map((item) => (
                 <div key={item.year} className="flex gap-8 items-start">
