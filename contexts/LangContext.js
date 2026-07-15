@@ -95,9 +95,9 @@ export const ui = {
 
   // ── Hero section ─────────────────────────────────────────────────────────
   hero: {
-    eyebrow: { en: 'Premium Textiles & Surfaces',  ar: 'منسوجات ومساطح راقية' },
+    eyebrow: { en: 'Premium Textiles & Surfaces',  ar: 'أقمشة و ورق جدران' },
     heading: { en: 'Where Threads \nBecome Art.',  ar: 'حيث تتحول الخيوط\nإلى فن' },
-    sub:     { en: "Curated upholstery, leather, wallcovering, and more — sourced from the world's finest ateliers.", ar: 'تنجيد وجلود وأغطية جدران منتقاة بعناية من أرقى المعامل في العالم.' },
+    sub:     { en: "Curated upholstery, leather, wallcovering, and more sourced from the world's finest ateliers.", ar: 'أقمشة و ورق جدران منتقاة بعناية من أفضل المعامل في العالم.' },
     cta:     { en: 'Explore Collection',           ar: 'استكشف المجموعة' },
   },
 
@@ -189,7 +189,7 @@ export const ui = {
   // ── Contact page ─────────────────────────────────────────────────────────
   contact: {
     eyebrow:     { en: 'Get in Touch',                ar: 'تواصل معنا' },
-    heading:     { en: "Let's Start\na Project", ar: 'لنبدأ\nمشروعًا' },
+    heading:     { en: "Let's Start\nYour Project", ar: 'لنبدأ\nمشروعك' },
     sub:         { en: "Whether you're looking for a specific product, need samples, or want a consultation for your project — our team is ready to help.", ar: 'سواء كنت تبحث عن منتج محدد، تحتاج عينات، أو تريد استشارة لمشروعك فريقنا مستعد للمساعدة.' },
     infoLabel:   { en: 'Contact Information',         ar: 'معلومات الاتصال' },
     infoHead:    { en: "We're Here to Help",          ar: 'نحن هنا لمساعدتك' },
