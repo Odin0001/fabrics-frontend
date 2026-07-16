@@ -76,7 +76,6 @@ export default function Navbar() {
                         href={`/products/${cat.slug}`}
                         className="flex items-center gap-3 px-4 py-2.5 text-sm text-muted hover:text-ink hover:bg-surface-2 transition-colors"
                       >
-                        <span className="text-base">{cat.icon}</span>
                         {lang === 'ar' ? cat.label.ar : cat.label.en}
                       </Link>
                     ))}

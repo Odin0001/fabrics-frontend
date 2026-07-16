@@ -145,7 +145,7 @@ export const ui = {
     missionLabel:  { en: 'Our Mission',                             ar: 'مهمتنا' },
     missionHead:   { en: 'Making Excellence Accessible',            ar: 'نجعل التميّز في المتناول' },
     missionP1:     { en: "Our Logo reflects philosophy in the domain of interior decoration and furniture; it reflects the fashion, colors and art of decoration", ar: 'شعارنا يعكس فلسفة في مجال تزيين الداخل والأثاث؛ فهو يعكس الأزياء والألوان والفن في التزيين' },
-    missionP2:     { en: "Our team of specialists understands designers' language and knows project challenges — from initial specification to final delivery.", ar: 'فريقنا من المتخصصين يفهم لغة المصممين ويعرف تحديات المشاريع من المواصفات الأولية حتى التسليم النهائي.' },
+    missionP2:     { en: "Our team of specialists understands designers' language and knows project challenges from initial specification to final delivery.", ar: 'فريقنا من المتخصصين يفهم لغة المصممين ويعرف تحديات المشاريع من المواصفات الأولية حتى التسليم النهائي.' },
     journeyLabel:  { en: 'Our Journey',                             ar: 'رحلتنا' },
     journeyHead:   { en: 'Decades of Growth',                       ar: 'عقود من التطور' },
     valuesLabel:   { en: 'Our Values',                              ar: 'قيمنا' },

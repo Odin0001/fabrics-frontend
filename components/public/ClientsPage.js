@@ -89,7 +89,7 @@ export default function ClientsPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24" dir={rtl ? 'rtl' : 'ltr'}>
+      {/* <section className="py-24" dir={rtl ? 'rtl' : 'ltr'}>
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-4">{t(ui.clients.testimonialsLabel, lang)}</p>
           <h2 className="font-display text-4xl font-light text-ink mb-16">{t(ui.clients.testimonialsHead, lang)}</h2>
@@ -112,7 +112,7 @@ export default function ClientsPage() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }
