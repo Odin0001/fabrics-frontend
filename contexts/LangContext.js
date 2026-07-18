@@ -125,7 +125,7 @@ export const ui = {
   // ── Footer ────────────────────────────────────────────────────────────────
   footer: {
     description: { en: 'Premium textiles and surfaces for discerning designers and specifiers worldwide.', ar: 'مواد نسيج ومفروشات فاخرة للمصممين والمختصين المميزين حول العالم.' },
-    collections: { en: 'Collections',         ar: 'المجموعات' },
+    collections: { en: 'Products',         ar: 'المنتجات' },
     company:     { en: 'Company',             ar: 'الشركة' },
     aboutUs:     { en: 'About Us',            ar: 'من نحن' },
     services:    { en: 'Services',            ar: 'خدماتنا' },
