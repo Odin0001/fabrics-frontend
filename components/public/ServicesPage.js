@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ArrowLeft } from 'lucide-react'
 import { useLang, t, ui } from '@/contexts/LangContext'
 
 const services = [
@@ -101,7 +101,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link href="/contact" className="btn-primary">
-              {t(ui.services.ctaContact, lang)} <ArrowRight className="h-4 w-4" />
+              {t(ui.services.ctaContact, lang)} {rtl ? <ArrowLeft className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
             </Link>
             <Link href="/products" className="btn-secondary border-canvas/30 text-canvas hover:bg-canvas hover:text-ink">
               {t(ui.services.ctaBrowse, lang)}

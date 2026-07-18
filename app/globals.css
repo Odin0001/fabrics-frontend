@@ -79,6 +79,7 @@ body::before {
 ::-webkit-scrollbar-thumb { background: var(--color-gold); border-radius: 3px; }
 
 /* ── Reusable component classes ───────────────────────────────── */
+@layer components {
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -178,6 +179,7 @@ body::before {
   color: var(--color-ink);
   background-color: var(--color-surface-2);
   font-weight: 500;
+}
 }
 
 /* Animation delay utilities */
